@@ -1,58 +1,50 @@
-Simple Registration App
-=======================
+# Simple Registration App
 
-Description
------------
+## Description
 
 This is a basic web application where users can fill out a registration form. The app saves the registration data to a MongoDB database.
 
-Prerequisites
--------------
+## Prerequisites
 
 To run this app, you need to have the following installed:
 
 1.  **Node.js**: This tool allows you to run JavaScript code on your computer.
-2.  **Docker**: This tool helps you package and run applications in a container.
+2.  **Docker Desktop**: This tool helps you package and run applications in a container.
 
-Download and install them from:
+### Install Node.js
 
--   [Node.js](https://nodejs.org/)
--   [Docker](https://www.docker.com/)
+Download and install Node.js from:
 
-Steps to Run the App
---------------------
+- [Node.js](https://nodejs.org/)
+
+### Install Docker Desktop
+
+1.  **Download Docker Desktop**: Go to the Docker website and download Docker Desktop for your operating system:
+
+    - Docker Desktop for Windows
+    - Docker Desktop for Mac
+
+2.  **Install Docker Desktop**: Follow the installation instructions provided on the Docker website.
+
+3.  **Start Docker Desktop**: After installation, open Docker Desktop and make sure it is running.
+
+## Steps to Run the App
 
 1.  **Clone the Repository**
 
     Get the code for the app by running this command in your terminal:
 
-    bash
-
-    Copy code
-
-    `git clone <repository-url>`
-
-    Replace `<repository-url>` with the link to your app's code.
+    `git clone https://github.com/jitsingfow/webinar-registration-app.git`
 
 2.  **Navigate to the App Directory**
 
     Change to the app directory:
 
-    bash
-
-    Copy code
-
-    `cd <repository-folder>`
-
-    Replace `<repository-folder>` with the folder name where you downloaded the code.
+    `cd webinar-registration-app`
 
 3.  **Build and Run the App**
 
     Start the app using Docker:
-
-    bash
-
-    Copy code
 
     `docker-compose up`
 
@@ -74,16 +66,14 @@ Steps to Run the App
 
     Fill out the form and submit it. The data will be saved to the MongoDB database.
 
-How It Works
-------------
+## How It Works
 
--   **Registration Form**: Users enter their information into a form on the website.
--   **Express.js**: Handles the server-side logic and routes for the form submission.
--   **MongoDB**: Stores the registration data.
--   **Docker**: Runs the app and MongoDB in isolated containers for easy setup and management.
+- **Registration Form**: Users enter their information into a form on the website.
+- **Express.js**: Handles the server-side logic and routes for the form submission.
+- **MongoDB**: Stores the registration data.
+- **Docker**: Runs the app and MongoDB in isolated containers for easy setup and management.
 
-Troubleshooting
----------------
+## Troubleshooting
 
 If you encounter any issues:
 
