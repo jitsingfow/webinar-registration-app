@@ -24,6 +24,7 @@ form.addEventListener("submit", async (e) => {
       form.reset();
     } else {
       alert(data.error || "Something went wrong");
+      form.reset();
     }
   } catch (error) {
     console.error("Error:", error);

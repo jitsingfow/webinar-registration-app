@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const registrationRoutes = require("./routes/registration");
+const connectDB = require("./config/db");
 
 dotenv.config();
 
@@ -17,13 +18,15 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+// mongoose
+//   .connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.log(err));
+
+connectDB();
 
 // Routes
 app.use("/api/registration", registrationRoutes);
