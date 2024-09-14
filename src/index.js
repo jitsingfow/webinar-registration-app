@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const path = require("path");
 const registrationRoutes = require("./routes/registration");
 const connectDB = require("./config/db");
 
@@ -10,6 +11,13 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
+// Serve HTML file on root
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 // Enable CORS
 app.use(cors());
